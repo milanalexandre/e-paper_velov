@@ -51,11 +51,11 @@ parameter:
 void EPD_7IN5B_HD_ReadBusy(void)
 {
     UBYTE busy;
-    printf("e-Paper busy\r\n");
+    Debug("e-Paper busy\r\n");
     do {
         busy = digitalRead(EPD_BUSY_PIN);
     } while(busy);
-    printf("e-Paper busy release\r\n");
+    Debug("e-Paper busy release\r\n");
 	delay(200);
 }
 
@@ -159,7 +159,7 @@ void EPD_7IN5B_HD_Clear(void)
 	EPD_7IN5B_HD_SendCommand(0x20);
 	delay(200);
 	EPD_7IN5B_HD_ReadBusy();
-	printf("clear EPD\r\n");
+	Debug("clear EPD\r\n");
 }
 
 void EPD_7IN5B_HD_ClearRed(void)
@@ -182,7 +182,7 @@ void EPD_7IN5B_HD_ClearRed(void)
 	EPD_7IN5B_HD_SendCommand(0x20);
 	delay(200);
 	EPD_7IN5B_HD_ReadBusy();
-	printf("clear EPD\r\n");
+	Debug("clear EPD\r\n");
 }
 
 void EPD_7IN5B_HD_ClearBlack(void)
@@ -241,7 +241,7 @@ void EPD_7IN5B_HD_Display(const UBYTE *blackimage, const UBYTE *ryimage)
 	EPD_7IN5B_HD_SendCommand(0x20);
 	delay(100);
 	EPD_7IN5B_HD_ReadBusy(); 
-	printf("display\r\n");
+	Debug("display\r\n");
 }
 
 /******************************************************************************

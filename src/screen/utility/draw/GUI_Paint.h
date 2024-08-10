@@ -46,9 +46,19 @@ typedef enum {
 /**
  * image color
 **/
-#define WHITE          0xFF
-#define BLACK          0x00
-#define RED            BLACK
+
+#if EPD_7in5B_HD
+    #define WHITE          0xFF
+    #define BLACK          0x00
+    #define RED            0x80
+#endif
+#ifndef EPD_7in5B_HD
+    #define WHITE          0xFF
+    #define BLACK          0x00
+    #define RED            BLACK
+#endif
+
+
 
 #define IMAGE_BACKGROUND    WHITE
 #define FONT_FOREGROUND     BLACK
