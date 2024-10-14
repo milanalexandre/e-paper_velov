@@ -23,7 +23,7 @@ Le système récupère les données depuis l'API officielle de Vélo'v et les af
 - GND -> GND
 - 3.3V -> 3.3V
 
-Voir le [fichier](src/screen/config.h) de configuration  
+Voir le [fichier](src/screen/config.h) de configuration
 ### Configuration du code
 #### Image de fond
 
@@ -56,6 +56,7 @@ cppCopystd::vector<Station> stationsToMonitor = {
     Station("2004", 420, 360),
     // Ajoutez d'autres stations ici
 };
+```
 Pour vous aider à placer les stations, commentez les [lignes suivantes](src/main.cpp):
 ```c
   setupWiFi();
@@ -64,7 +65,7 @@ Pour vous aider à placer les stations, commentez les [lignes suivantes](src/mai
   stationManager.printAllStations();
 ```
 et décomanter:
-```c
+```
   // help();
 ```
 Cette fonction help() affichera un quadrillage sur l'écran pour faciliter le positionnement précis des stations.
